@@ -1,0 +1,44 @@
+Name: Zheyuan Gao
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+
+Part 1:
+
+Q1: Because depends on different computers and operating system, the resolution can vary from hundredth to millionth of a second. 
+
+Q2: I think the painfully obvious way to reduce the CPU time might be provides empty input files and empty input for lab2 and lab3. 
+
+Q3: I don't think it is a comprehensive measure of a program. Because like the answer in Q2, if we provides empty input files and empty input, the program will take no time to execute. However, the program might still need very long execution time to handle large input. 
+
+Q4: The execution time decrease because call -O flag will do optimization for code size and execution time. Without the -O flag, the compiler will do default optimization which will take more execution time and increase the code time. 
+
+Q5: The execution time decrease again and it is because the -O3 flag optimization more for code size and execution time. -O3 is optimize the code more than -O flag.
+
+Q6: The file size for Q5 generally increased compare to file size compiled without -g and -O3 flags. We should expect this because since the -O3 flag make more optimization to the program and decrease the execution time. Then in order to let the execution time to be shorter, the file size and memory usage will increase. 
+
+Q7: Because when the level of the compiler optimization increases, more work needed to be done on the C code. Therefore, it will take more time for the compiler to compile the code. 
+
+Q8: Because the purpose and requirement for different program is various, the program might need different aspect of optimization. There are tradeoff for different level of optimizations. The higher the optimization level, the faster the program execute. However, it will also increase the amount of memory usage and compile time. There are so many optimization flags so that the programmer can choose the most appropriate optimization level depends on the purpose, requirement, and usage of the program. 
+
+Part 2:
+
+Q1: 
+lab1out is the files with profiling information for lab1.
+enIn1 and enIn2 are input file for lab2 and enOut1 and enOut2 are corresponding files with profiling information. 
+BSTin1 and BSTin2 are input file for lab3 and BSTout1 and BSTout2 are corresponding files with profiling information.
+
+Q2: In the profiling information for my BST program, I notice that I called add 17+44 times in order to add 9 characters from a file. I think the reason might be I call add twice for every new characters to create a balanced and an unbalanced trees. The 44 times after the plus sign might just be the recursive calls of function add itself. 
+
+Q3:
+Lab1: main funtion
+Lab2: main function
+Lab3: function "add"
+
+Q4: 
+Lab1: No, no much to do with the main function.
+Lab2: No, same reason as lab1.
+Lab3: I might consider depends on the user input command line arguement. Instead generate two trees, I will only generate balanced or normal tree. This will reduce the number of calls for "add" function. 
+
+Q5: No it is not. If I provide empty input file for lab3, the program will never call the "add" function. Therefore, I can not analyze whether the program need improvement from the profiling information.
+
+Q6: "-b" ot "--brief". I think it is useful because if the "-b" flag is given,  the gprof will not print the the massive pragraphs trying to explain the meaning of the words in the table. It will only provides two tables with the useful profiling information. Hence, I can get more straightforward understanding of my program performance. 

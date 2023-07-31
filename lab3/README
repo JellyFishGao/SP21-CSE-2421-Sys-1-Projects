@@ -1,0 +1,39 @@
+Name: Zheyuan Gao
+
+#How to use command line arguments for this program: 
+#First argument: Enter 'y' to produce a balanced BST. An ordinary BST is produced for other character input.
+#Second argument: Enter 'y' to read a file input. No file will be read for other characters input.
+#Third argument: Provide the name of the input file if entered 'y' for second argument. Optional if not entered 'y' for second argument.
+#Remark: Please enter exactly 2 or 3 arguments (Not include program name "cmdBST") or the program will quit.
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+
+Part 1:
+
+Q1: Instead of only have one pointer points to the next node in linked list, the BST nodes contain two pointers points to left tree and right tree. Also the node in BST contains a character as its data.
+
+Q2: I used the way we print binary tree in software II. A pair of empty parentheses indicates the tree is empty, like this: (). The empty parentheses can also indicates which child does the root lack of. For example, the representation of a tree has 'b' as root, 'a' as it only child can be represented as "b(a(()())())".
+
+Q3: I think it is possible. The p2p2change pointer can compare its value with the root and decide which "brach" it should continue to traverse to. 
+
+Part 2:
+
+Q1: a) I declared two roots, one is for ordinary BST and one is for balanced BST. I chooes to continue using the add and remove function of oridinary BST. After the every insertion and deletion, I read all the elements current in ordinary BST and update my balanced BST based on the modification. 
+b) The reason I choose to balance my tree this way is because this is the most straight forword solution I can come up with. I only need to implement two more functions than my oridinary BST program.
+
+Q2: I use an array to store the elements in ordinary BST. The reason I do this is because I want the elements in the array is in sorted order. Hence, I can generate a balanced BST easier. 
+
+Q3: Since I did not modify the add and remove functions for the ordinary BST. The answer to this question is still "I think it is possible." The p2p2change pointer can compare its value with the root and decide which "brach" it should continue to traverse to. I only need the ordinary BST to help me sent the elements sorted to an array. Then I will produce balanced BST using that array. 
+
+Part 3:
+
+Q1: Instructions has been provided at the top of README and makefile files.
+
+Q2: Because the command line argument is an array of character array or in other words an array of strings. I can interpret the first element of the string easily and treat it as a character. And then characters are easy to identify and compare with other character. Therefore, I select my first two arguments to be single character strings for convenience.
+
+Q3: "BST.in" is the test file for part 3 and it is included in the "lab3.zip".
+
+Q4: a) I add an if statement to check exactly 2 or 3 arguements are provided or the program will quit. 
+    b) If the file name argument is switched by other arguments. I have a if statement during file open process to make sure the file exists and can be open, or the program will quit. The other two arguments will only be read the first character and program will perform based on that character.
+    c) I think I should handle some of the major invalid inputs such as wrong amount of arguments and wrong file name. However, there are too many invalid inputs so I might not able to handle all of them. Therefore, it is my responsibility to provide specific instructions and guide lines for accepted user input. In turn, it is user responsibility to provide valid input or there no guarantee the program will run and produce expected output. This concept is just like design by contract. 
+

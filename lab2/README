@@ -1,0 +1,31 @@
+Name: Zheyuan Gao
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+
+Part1:
+
+Q1: I wrote an empty test file as the small boundary to test my program the ability to handle empty input file. I also include an file with character less than 8 to make sure my program can handle this special case.Except for the required 8 characters file. I create a file with 24 character, number, and special character in it to make sure the code can handle large complex case.
+
+Q2: Input: abcdefgd    output: abãdeæç I choose the character in order except for the 8th character. Because if the input character is different only by 1 in bits, it will be easier for me to calculate the expected output.
+
+Q3: Instead of using the 8th number as key of encryption, we can use the first number of the 8 numbers as the key. Let the most significan digit of the rest 7 numbers to be the bits of the first number.
+
+Q4: I can still set my macro to be 8 since the amount of numbers in a group is still 8. Then I can accomplish this bu modifyng the for-loop conditions. Instead of access every 8th elements in array as the key, I will access (0+8k, k=1,2,3,4...) th element in the array as the key. Then I can access the rest numbers from the same group and do bit oprations by adding 1 to the location of the key. 
+
+Part2: 
+
+Q1: If the amount of characters for the input file for encryption is multiple of 7. It will not be encrypted since it is not a multiple of 8. However, when we trying to decrypt it, the program will treat it as an encrypted file because the amount of character in it is multiple of 7. That will cause the decrypted output file is different from the original input file.
+
+Q2: This problem can be fixed with changing the rule of encryption and decryption. Instead of discard the every 8th number during encryption, we only use it to decrypt the 7 numbers before and leave it intact. Then, if the amount of characters in a file is multiple of 8, we can assure this is a encrypted file and go ahead letthe program to decrypt it. 
+
+Part3:
+
+Q1: I mangled a copy of my decryption code. Because it is slightly simpler than my encryption code. Hence, it is easy to change some of the stucture of the code.
+
+Q2: I believe it will be difficult for me to understand what the code does even for now. It will take a big chunk of time for me to interpret the code after several months.
+
+Q3: I think it would be harder. Because when I transform good formatted code to bad format. I can quickly understand what each line of code does because of the comments meaningful variables' name. However, if the code does not have any indentation, comments, and useful variables name, each line of code will consume a lot time for me to understand what it does. 
+
+Q4: We assume the left most bit of the input characters is always 0. The largest character allowed for input is Delete sign (01111111 in binary represnetation and 127 as decimal representation).
+
+Q5: If the left most bit of the first 7 characters is 1. I used the binary opration OR to insert the bits of 8th character. However, if one of the bit that 8th character has is 0. 1 | 0 will still be 1. And the process of encryption is failed. In turn, during the process of decryption, the left most bit becomes one of the bit of the 8th character which will change the original 0 to 1. This will fail the decryption process.

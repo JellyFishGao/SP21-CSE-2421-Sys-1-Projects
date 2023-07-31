@@ -1,0 +1,31 @@
+Name: Zheyuan Gao
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the
+undergraduate graders.
+
+Part1:
+
+Q1: Because there is no comments and the indentation is terrible, I could not read and understand what I did last time. 
+
+Q2: It is very important to write sufficiently readable codes. Because code is not a one time use item, it will likely require continuous optimization and modification. Writing unreadable code can make such a process very time consuming and painful.
+
+Q3: Compared to C, the length of functions in assembly language will be significantly longer. But due to the limited number of registers, I don't have the ability to declare as many variables as in C. Instead, I will just use numbers instead of variables. But this also makes assembly language more abstract and difficult to read compared to C.
+
+Q4: Yes, I created a function called reverseBit to help with encryption. I used %rdi to pass the only arguement to the function. In the function, I only used %rdi and %rax. They are all caller-saved registers so I did not assign any values in them in my main function. Before the end of the function, I store the return value in %rax so that I can access it in my main function.
+
+Q5: The "enIn" file is the test file and "rightOut" file is the expected output. 
+
+Q6: I think it is more natural to manipulate bits in C. Because for the thing I can do in one line in C like : "c=(c&51)<<2|(c&204)>>2;", I need to write 5 lines code in Assembly to do the same thing. It is kind of inconvenient. 
+
+Part2:
+
+Q1: I typed "break main" and it worked. It sets break point at line 56 where my main function is. I think it is because I called my main function "main" therefore the gdb can recognize it.
+
+Q2: I typed "break encrypt.s:57" and it set my break point to line 57.
+
+Q3: I can see my registers' values as well as flags on the top of the terminal. The middle part of my terminal is the assembly code and it is highlighting the next line of code to be executed. And the bottom of the terminal is the part where I can enter gdb commands.
+
+Q4: Yes, I am able to step through the program line-by-line using command "n" or "next".
+
+Q5: I tried "c"(continue), "n"(next), "r"(run), "s"(step) commands and they all work the same way as usual gdb commands. Therefore, I believe other commands for gdb still work. 
+

@@ -1,0 +1,60 @@
+Name: Zheyuan Gao
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+
+Part 1:
+
+Q1: 
+1. Use command "mv lab1 lab1temp" to rename the executable file created before. 
+2. Use command "mkdir lab1" to create a folder called lab1 inside the cse2421 folder.
+3. Use command "mv lab1.c lab1" and "mv lab1temp lab1" and "mv customheader.h lab1" to move all the new created file in the lab1 folder.
+4. Use command "cd lab1" to change the current directory into lab1 folder.
+5. use command "mv lab1temp lab1" change the executable file's name bakc to lab1.
+
+Q2: 
+It will list out all the files including thoes files' name begin with dot. It will provide specific information such as user name and modified date in a line for each file. The order that files listed out is sorted by its last modified date.
+
+Q3: 
+1. "cd ..." changes current working directory to the directory specified after "cd". If no argument is provided, "cd" will change into home directory.
+2. "cd ~" returns back to the home directory.
+3. "cd ." will change into current directory. It basicly means do nothing.
+4. "cd .." will change the current directory one level up to its parent directory.
+
+Part 2:
+
+Q1:  
+1. The targets in the makefile is executed in turn. And there are five new files created by the commands in the makefile.
+2. A file called "tags" is created by the command "ctags -R". A lab1.vs is created. A file named hearder is created by execute the commands in headers.sh. A lab1 object file is created and also an executeable file called lab1 is created.
+
+Q2: 
+1. Now the time stamp of the file customheader.h is changed to current time.
+2. This command should change the time stamp of the customerheader.h to the current time.
+3. Because the time stamp of customheader.h is is now later than lab1.o. The target "lab1" in make file is executed again. Therefore, a new lab1.o and lab1 executeable files are created again.
+
+Q4&Q5: 
+1. The numbers file now contains two chucks of file names in directory lab1 and their specific information. It also contains the specific dates and times of the moments that I issued the first command, first commands executed, second command issued, and second command executed. 
+2. Because I issued the command twice, therefore, the new dates and the updated time stamps of the files are recored into the numbers file. Because I edited the makefile, the time stamp of the makefile in the numbers file is changed. Also, the second time I issue the command makes the numbers file been edited, too. Hence the time stamp of the numbers file is also changed.
+
+Part 3:
+
+Q1: It is the next line that is going to be run. Because we set up a breakpoint at first line of main which is line 11, the next command just let the program executed line 11. Now the line 14 is showed up in the terminal and it is not executed yet.
+
+Q2: 
+1. At first the value of i is 1. 
+2. Second time it is still 1. Because line 14 was executed and it is meant to print out "i=1, " to the console but not change the value of i.
+3. At the end, i has been set to value of 10. Because we entered the command "set variable i = 10" to change the value of i to 10.
+4. The output changes to "i=1, which is even". This is because we change the value of i from 1 to 10 between line 14 and 15. This makes j at line 15 been set to 1. Therefore it changes the final output and print "which is even".
+
+Q3: 
+You can type "step" or "s" to step into a function when the next line is the function.
+
+Q4: 
+The output changes to "i=1, which is even". Because I changed the value of the parameter x in my evenOrOdd function, the value the function returns is 1. That sets value of j in main function to be 1. Which will make the program output changes to "i=1, which is even".
+
+Q5: Line 33. It passes two prameter to function divide, bot = 10 and i = 0. It will cause the 10 divided by 0 inside function divide body.
+
+Q6: 
+1. I will change the line 32 from "for(i=bot; i>=0; i--){" to "for(i=bot; i>0; i--){". This will prevent i = 0 sent to the divide function to cause divide by 0 error.
+2. Using gdb to debug is absolutly faster than just stare at code to figure out what goes wrong!
+      
+

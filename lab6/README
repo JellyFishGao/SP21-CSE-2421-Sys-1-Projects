@@ -1,0 +1,27 @@
+Name: Zheyuan Gao
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+
+Part 1:
+
+Q1: 
+“Im big fan of small word. No like big word or good grammar. Grammar too hard.”
+“I really hate how nice the weather is getting.”
+“What”
+“Amazing, isnt it? With just the slightest touch the material warps around the skin effortlessly.”
+“Can you believe how much ligma is going around this year?”
+
+Q2:
+Step 1: Please go to line 213: "subq $40, %rsp". Change the 40 to (8*number of strings total). This will allocating space on stack for string pointers array.
+Step 2: Please go to line 215: "movq $5, %r12". Change the 5 to the total number of strings provided for the program.
+Step 3: Please check line 217-230. This part of code add string's address to the pointer array %rbx. 
+If you would like to add more string to test, you can simply copy and paste:
+"incq %r13
+ movq $str#, (%rbx,%r13,8) " where # will be the index of new string.
+
+If you like to delete existing string, you can delete one of the section of:
+"incq %r13
+ movq $str#, (%rbx,%r13,8)" where # will be the index of an existing string.
+
+Thank you for reading this instructions.:) I am sorry if these are not well indented.
+
